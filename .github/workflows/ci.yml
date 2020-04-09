@@ -11,5 +11,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Install Swift-SH
+      run: brew install mxcl/made/swift-sh
     - name: Validate JSON
       run: swift validate.swift diff
